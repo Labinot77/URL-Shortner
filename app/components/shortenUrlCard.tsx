@@ -1,25 +1,32 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 interface CardProps {
   id: string;
   originalUrl: string;
   shortUrl: string;
 }
 
-export function ShortenUrlCard({ id, originalUrl, shortUrl }: CardProps) {
-    console.log(id, originalUrl, shortUrl)
+export function ShortenUrlCard({ originalUrl, shortUrl }: CardProps) {
   return (
-    <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-      <p className="text-sm text-slate-500 mb-1">Original URL:</p>
-      <p className="text-sm break-all mb-2">{originalUrl}</p>
-
-      <p className="text-sm text-slate-500 mb-1">Short URL:</p>
-      <a
-        href={shortUrl}
-        target="_blank"
-        rel="noreferrer"
-        className="text-cyan-600 font-medium underline break-all"
-      >
-        {shortUrl}
-      </a>
-    </div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, ease: "easeOut" }}
+      className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm mt-4"
+    >
+      <p className="text-sm text-slate-500 mb-1">
+        Short URL:{' '}
+        <a
+          href={shortUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="text-cyan-600 font-medium underline"
+        >
+          {shortUrl}
+        </a>
+      </p>
+    </motion.div>
   );
 }

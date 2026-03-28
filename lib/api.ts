@@ -1,6 +1,5 @@
-// lib/api.ts
 type RequestOptions = RequestInit & {
-  data?: any; // body data
+  data?: any;
 };
 
 export async function apiGet<T>(url: string): Promise<T> {

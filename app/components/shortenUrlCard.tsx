@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 
 interface CardProps {
   id: string;
-  originalUrl: string;
   shortUrl: string;
 }
 
-export function ShortenUrlCard({ originalUrl, shortUrl }: CardProps) {
+export function ShortenUrlCard({ shortUrl }: CardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

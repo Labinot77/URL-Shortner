@@ -1,6 +1,6 @@
-type RequestOptions = RequestInit & {
-  data?: any;
-};
+// type RequestOptions = RequestInit & {
+//   data?: any;
+// };
 
 export async function apiGet<T>(url: string): Promise<T> {
   const res = await fetch(url, {

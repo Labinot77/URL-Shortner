@@ -91,7 +91,7 @@ export default function Home() {
 
         <AnimatePresence>
           {shortUrl && (
-            <ShortenUrlCard id="1" originalUrl={url} shortUrl={shortUrl} />
+            <ShortenUrlCard id="1" shortUrl={shortUrl} />
           )}
         </AnimatePresence>
       </main>

@@ -2,6 +2,8 @@
 
 A fully functional URL shortening application built with **Next.js**, **Prisma**, and **MongoDB**. Users can shorten long URLs and copy/share the generated short links.  
 
+A part of the backend projects on -- **https://roadmap.sh/backend/projects**
+
 **Features:**
 - Generate short links with unique codes using `nanoid`
 - Persist links in MongoDB via Prisma ORM

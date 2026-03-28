@@ -16,12 +16,10 @@ export async function GET(
     return new NextResponse("URL not found", { status: 404 })
   }
 
-  // Ensure URL has http or https
   let destination = record.originalUrl
   if (!/^https?:\/\//i.test(destination)) {
     destination = `https://${destination}`
   }
 
-  // Redirect
   return NextResponse.redirect(destination)
 }
